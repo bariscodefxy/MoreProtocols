@@ -57,7 +57,7 @@ class MoreProtocols extends PluginBase implements Listener {
      *
      * @return void
      */
-    public function onEnable() {
+    public function onEnable() : void {
         $this->getServer()->getLogger()->info("[MoreProtocols] Plugin activated.");
         $this->config = new Config($this->getDataFolder() . "Config.yml", Config::YAML, [
             "allowed-protocols" => [
@@ -72,7 +72,7 @@ class MoreProtocols extends PluginBase implements Listener {
      *
      * @return void
      */
-    public function onDisable() {
+    public function onDisable() : void {
         $this->getServer()->getLogger()->info("[MoreProtocols] Plugin de-activated.");
     }
 
